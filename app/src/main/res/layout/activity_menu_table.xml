@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,33 +7,29 @@
     tools:context=".menuTable">
 
     <android.support.v7.widget.GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="791dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="101dp"
         app:columnCount="5"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="6"
         app:rowCount="4">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             app:layout_columnWeight="1"
@@ -42,8 +38,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginBottom="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
@@ -53,8 +49,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/poldnik"
@@ -63,8 +59,8 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/ujin"
@@ -73,8 +69,8 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/vechernik"
@@ -83,8 +79,8 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="13dp"
-            android:layout_height="21dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/pancake"
@@ -93,40 +89,40 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="86dp"
-            android:layout_height="90dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/soup" />
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="wrap_content"
-            android:layout_height="145dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/juicee" />
 
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="161dp"
-            android:layout_height="145dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/salad" />
 
         <ImageView
             android:id="@+id/imageView15"
-            android:layout_width="199dp"
-            android:layout_height="147dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/glassmilk" />
 
         <ImageView
             android:id="@+id/imageView17"
-            android:layout_width="190dp"
-            android:layout_height="105dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/cheese"
@@ -135,32 +131,32 @@
 
         <ImageView
             android:id="@+id/imageView18"
-            android:layout_width="4dp"
-            android:layout_height="84dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/cucumber" />
 
         <ImageView
             android:id="@+id/imageView19"
-            android:layout_width="wrap_content"
-            android:layout_height="168dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/baking" />
 
         <ImageView
             android:id="@+id/imageView20"
-            android:layout_width="109dp"
-            android:layout_height="121dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/potato" />
 
         <ImageView
             android:id="@+id/imageView21"
-            android:layout_width="93dp"
-            android:layout_height="99dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             app:srcCompat="@drawable/eggs"
@@ -169,8 +165,8 @@
 
         <ImageView
             android:id="@+id/imageView26"
-            android:layout_width="215dp"
-            android:layout_height="213dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="0"
             app:srcCompat="@drawable/coffee"
@@ -179,8 +175,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="3"
@@ -189,8 +185,8 @@
 
         <ImageView
             android:id="@+id/imageView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_column="2"
             app:layout_columnWeight="1"
             app:layout_row="3"
@@ -201,20 +197,22 @@
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="245dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="1023dp"
-        android:layout_marginLeft="1023dp"
-        android:layout_marginTop="806dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout"
+        app:layout_constraintVertical_weight="1"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

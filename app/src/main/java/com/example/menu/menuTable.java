@@ -20,7 +20,6 @@ public class menuTable extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(menuTable.this,MainActivity.class);
-        startActivity(intent);
+        finish();
     }
 }

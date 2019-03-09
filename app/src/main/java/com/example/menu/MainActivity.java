@@ -35,10 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent =new Intent (MainActivity.this,menuTable.class);
                 intent.putExtra("DayOfWeek","Monday");
                 startActivity(intent);
-            case R.id.btnTuesday:
-                intent =new Intent (MainActivity.this,MenuTable2.class);
-                intent.putExtra("DayOfWeek","Tuesday");
-                startActivity(intent);
+
             /*case R.id.btnWednesday:
                 intent =new Intent (MainActivity.this,menuTable.class);
                 intent.putExtra("DayOfWeek","Wednesday");

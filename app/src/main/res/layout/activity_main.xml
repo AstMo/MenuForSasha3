@@ -17,6 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         app:srcCompat="@drawable/monday" />
 
     <ImageButton
@@ -30,6 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnMonday"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btnWednesday"
         app:srcCompat="@drawable/tuesday" />
 
     <ImageButton
@@ -88,15 +90,12 @@
         android:id="@+id/btnSunday"
         android:layout_width="173dp"
         android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="908dp"
+        android:layout_marginRight="908dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnSaturday"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sunday" />
 </android.support.constraint.ConstraintLayout>
