@@ -17,16 +17,13 @@ public class activity_grid_item extends AppCompatActivity {
         Intent intent = getIntent();
         int receivedImage = intent.getIntExtra("image",0);
         imageView.setImageResource(receivedImage);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);
-
     }
     @Override
     public void onBackPressed() {

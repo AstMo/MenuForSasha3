@@ -12,11 +12,15 @@ import android.widget.ImageView;
 
     public class MainActivity extends AppCompatActivity {
         GridView gridView;
-        int[] foodImages = {R.drawable.apple,R.drawable.grechka,R.drawable.coffee,R.drawable.apple,R.drawable.baking,R.drawable.boiled,R.drawable.bread,R.drawable.cheese,
-                R.drawable.classicbreakfast,R.drawable.cookies,R.drawable.cookieswithdarkchocolate,R.drawable.cucumber
-                ,R.drawable.eggs,R.drawable.fish,R.drawable.friedegg,R.drawable.friedegg1,R.drawable.fruits,
-                R.drawable.glassmilk,R.drawable.hotsoup,R.drawable.juicee,R.drawable.makarons,R.drawable.milk,
-                R.drawable.pancake};
+        int[] foodImages = {R.drawable.zavtrak, R.drawable.friedegg, R.drawable.porridge,R.drawable.coffee,
+                R.drawable.obed,R.drawable.fish,R.drawable.vegetables,R.drawable.soup,R.drawable.poldnik,
+                R.drawable.apple,R.drawable.water,R.drawable.cookies,R.drawable.ujin,R.drawable.salad,
+                R.drawable.rice,R.drawable.tea,R.drawable.vechernik,R.drawable.glassmilk};
+
+        int[] foodImages2 = {R.drawable.zavtrak, R.drawable.pancake, R.drawable.cheese,R.drawable.coffee,
+                R.drawable.obed,R.drawable.hotsoup,R.drawable.cucumber,R.drawable.fish,R.drawable.poldnik,
+                R.drawable.juicee, R.drawable.bread,R.drawable.tea1,R.drawable.ujin,R.drawable.salad,
+                R.drawable.potato,R.drawable.water,R.drawable.vechernik,R.drawable.cookies,R.drawable.milk};
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -35,7 +39,6 @@ import android.widget.ImageView;
 
                 }
             });
-
 
         }
 
@@ -58,9 +61,7 @@ import android.widget.ImageView;
             @Override
             public View getView(int i, View view, ViewGroup viewGroup) {
                 View view1 = getLayoutInflater().inflate(R.layout.row_data,null);
-                //getting view in row_data
                 ImageView image = view1.findViewById(R.id.images);
-
                 image.setImageResource(foodImages[i]);
                 return view1;
 
