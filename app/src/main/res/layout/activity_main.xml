@@ -2,100 +2,21 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="MainActivity">
 
-    <ImageButton
-        android:id="@+id/btnMonday"
-        android:layout_width="173dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:srcCompat="@drawable/monday" />
-
-    <ImageButton
-        android:id="@+id/btnTuesday"
-        android:layout_width="173dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMonday"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/btnWednesday"
-        app:srcCompat="@drawable/tuesday" />
-
-    <ImageButton
-        android:id="@+id/btnWednesday"
-        android:layout_width="173dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnTuesday"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wednesday" />
-
-    <ImageButton
-        android:id="@+id/btnThursday"
-        android:layout_width="173dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnWednesday"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/thursday" />
-
-    <ImageButton
-        android:id="@+id/btnFriday"
-        android:layout_width="173dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnThursday"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/friday" />
-
-    <ImageButton
-        android:id="@+id/btnSaturday"
-        android:layout_width="173dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnFriday"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/saturday" />
-
-    <ImageButton
-        android:id="@+id/btnSunday"
-        android:layout_width="173dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="908dp"
-        android:layout_marginRight="908dp"
-        android:layout_marginBottom="8dp"
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#e5e5e5"
+        android:horizontalSpacing="1dp"
+        android:numColumns="2"
+        android:verticalSpacing="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sunday" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></GridView>
+
 </android.support.constraint.ConstraintLayout>
