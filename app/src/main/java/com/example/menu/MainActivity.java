@@ -4,59 +4,66 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    public class MainActivity extends AppCompatActivity {
+        GridView gridView;
+        int[] foodImages = {R.drawable.apple,R.drawable.grechka,R.drawable.coffee,R.drawable.apple,R.drawable.baking,R.drawable.boiled,R.drawable.bread,R.drawable.cheese,
+                R.drawable.classicbreakfast,R.drawable.cookies,R.drawable.cookieswithdarkchocolate,R.drawable.cucumber
+                ,R.drawable.eggs,R.drawable.fish,R.drawable.friedegg,R.drawable.friedegg1,R.drawable.fruits,
+                R.drawable.glassmilk,R.drawable.hotsoup,R.drawable.juicee,R.drawable.makarons,R.drawable.milk,
+                R.drawable.pancake};
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ImageButton btnMonday = (ImageButton) findViewById(R.id.btnMonday);
-        ImageButton btnTuesday = (ImageButton) findViewById(R.id.btnTuesday);
-        ImageButton btnWednesday = (ImageButton) findViewById(R.id.btnWednesday);
-        ImageButton btnThursday = (ImageButton) findViewById(R.id.btnThursday);
-        ImageButton btnFriday = (ImageButton) findViewById(R.id.btnFriday);
-        ImageButton btnSaturday = (ImageButton) findViewById(R.id.btnSaturday);
-        ImageButton btnSunday = (ImageButton) findViewById(R.id.btnSunday);
-        btnMonday.setOnClickListener(MainActivity.this);
-        btnTuesday.setOnClickListener(MainActivity.this);
-        btnWednesday.setOnClickListener(MainActivity.this);
-        btnThursday.setOnClickListener(MainActivity.this);
-        btnFriday.setOnClickListener(MainActivity.this);
-        btnSaturday.setOnClickListener(MainActivity.this);
-        btnSunday.setOnClickListener(MainActivity.this);
-    }
+            gridView = findViewById(R.id.gridview);
 
-    @Override
-    public void onClick(View imageButton) {
-        switch (imageButton.getId()){
-            case R.id.btnMonday:
-                Intent intent =new Intent (MainActivity.this,menuTable.class);
-                intent.putExtra("DayOfWeek","Monday");
-                startActivity(intent);
+            CustomAdapter customAdapter = new CustomAdapter();
+            gridView.setAdapter(customAdapter);
+            gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Intent intent = new Intent(getApplicationContext(),activity_grid_item.class);
+                    intent.putExtra("image",foodImages[i]);
+                    startActivity(intent);
 
-            /*case R.id.btnWednesday:
-                intent =new Intent (MainActivity.this,menuTable.class);
-                intent.putExtra("DayOfWeek","Wednesday");
-                startActivity(intent);
-            case R.id.btnThursday:
-                intent =new Intent (MainActivity.this,menuTable.class);
-                intent.putExtra("DayOfWeek","Thursday");
-                startActivity(intent);
-            case R.id.btnFriday:
-                intent =new Intent (MainActivity.this,menuTable.class);
-                intent.putExtra("DayOfWeek","Friday");
-                startActivity(intent);
-            case R.id.btnSaturday:
-                intent =new Intent (MainActivity.this,menuTable.class);
-                intent.putExtra("DayOfWeek","Saturday");
-                startActivity(intent);
-            case R.id.btnSunday:
-                intent =new Intent (MainActivity.this,menuTable.class);
-                intent.putExtra("DayOfWeek","Sunday");
-                startActivity(intent);*/
+                }
+            });
+
+
         }
 
+        private class CustomAdapter extends BaseAdapter {
+            @Override
+            public int getCount() {
+                return foodImages.length;
+            }
+
+            @Override
+            public Object getItem(int i) {
+                return null;
+            }
+
+            @Override
+            public long getItemId(int i) {
+                return 0;
+            }
+
+            @Override
+            public View getView(int i, View view, ViewGroup viewGroup) {
+                View view1 = getLayoutInflater().inflate(R.layout.row_data,null);
+                //getting view in row_data
+                ImageView image = view1.findViewById(R.id.images);
+
+                image.setImageResource(foodImages[i]);
+                return view1;
+
+            }
+        }
     }
-}
